@@ -27,11 +27,11 @@ Feature: User API Tests
     And status 200
 
   Scenario: Update User
-    * def reqBody = {"id": 9000,"username": "qa 1","firstName": "qa satuu","lastName": "satu","email": "qasatu@gmail.com","password": "password","phone": "081283884345","userStatus": 0}
+    * def reqBody = {"id": 9000,"username": "qa1","firstName": "qa satuu","lastName": "satu","email": "qasatu@gmail.com","password": "password","phone": "081283884345","userStatus": 1}
     When url "https://petstore.swagger.io/v2/user/qa1"
     And method put
     Then print response
-    And status 415
+    And status 200
 
    Scenario: Delete User
      When url "https://petstore.swagger.io/v2/user/string"
